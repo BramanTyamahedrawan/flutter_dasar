@@ -11,15 +11,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-            backgroundColor: const Color.fromARGB(255, 61, 12, 131),
-            title: const Text('Row Widget')),
+          backgroundColor: const Color.fromARGB(255, 61, 12, 131),
+          title: const Text('Column Widget'),
+        ),
         body: Center(
           // widget row dan column dapat digabungkan dan memiliki properti children yang dapat diisi dengan widget lain
-          child: Row(
-            // Row adalah widget yang digunakan untuk menampilkan widget secara horizontal
+          child: Column(
+            // Column adalah widget yang digunakan untuk menampilkan widget secara vertikal
             mainAxisAlignment:
                 MainAxisAlignment // mainAxisAlignment untuk menentukan posisi widget (row, column, dan flex), default nilai adalah MainAxisAlignment.start
-                    .spaceEvenly, // spaceEvenly untuk menyeimbangkan ruang di antara widget
+                    .spaceAround, // spaceAround untuk menyeimbangkan ruang di antara widget
             children: [
               // children untuk menampung widget lain
               Container(
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
               ),
             ],
           ),
-          // batas akhir widget Row
+          // batas akhir widget Column
         ),
       ),
     );

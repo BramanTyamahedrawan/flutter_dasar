@@ -5,7 +5,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  // StatefulWidget adalah widget yang memiliki state atau dapat berubah
+  // StatefulWidget adalah widget yang memiliki state atau dapat berubah-ubah
   const MyApp({Key? key}) : super(key: key);
 
   @override
@@ -13,17 +13,19 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<MyApp> {
-  var number = 0;
+  var number = 0; // variable number bertipe data integer
 
   void getNumber() {
+    // method getNumber digunakan untuk menambahkan nilai number
     setState(() {
       number = number + 1;
     });
   }
 
   void minNumber() {
+    // method minNumber digunakan untuk mengurangi nilai number
     setState(() {
-      number -= 1;
+      number -= 1; // sama dengan number = number - 1
     });
   }
 
@@ -40,7 +42,9 @@ class _MyWidgetState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                number.toString(),
+                // widget Text digunakan untuk menampilkan teks
+                number
+                    .toString(), // method toString() digunakan untuk mengubah tipe data number menjadi string
                 style: const TextStyle(fontSize: 25),
               ),
               Row(
@@ -48,14 +52,14 @@ class _MyWidgetState extends State<MyApp> {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      getNumber();
+                      getNumber(); // memanggil method getNumber
                     },
                     child: const Icon(Icons.add),
                   ),
                   const Padding(padding: EdgeInsets.all(8)),
                   ElevatedButton(
                     onPressed: () {
-                      minNumber();
+                      minNumber(); // memanggil method minNumber
                     },
                     child: const Icon(Icons.remove),
                   ),

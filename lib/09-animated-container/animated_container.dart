@@ -7,7 +7,7 @@ void main() => runApp(const AnimatedContainerApp());
 class AnimatedContainerApp extends StatefulWidget {
   const AnimatedContainerApp({Key? key}) : super(key: key);
   @override
-  _AnimatedContainerAppState createState() => _AnimatedContainerAppState();
+  State<AnimatedContainerApp> createState() => _AnimatedContainerAppState();
 }
 
 class _AnimatedContainerAppState extends State<AnimatedContainerApp> {

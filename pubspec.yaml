@@ -76,11 +76,13 @@ flutter:
   fonts:
     - family: Oswald
       fonts:
-        - asset: fonts/Oswald-Regular.ttf
+        - asset: assets/fonts/Oswald-Regular.ttf
     - family: Lugrasimo
       fonts:
-        - asset: fonts/Lugrasimo-Regular.ttf
-
+        - asset: assets/fonts/Lugrasimo-Regular.ttf
+    - family: Pacifico
+      fonts:
+        - asset: assets/fonts/Pacifico-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
